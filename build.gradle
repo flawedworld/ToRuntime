@@ -33,6 +33,11 @@ plugins {
     id 'com.github.spotbugs' version '1.6.9'
 }
 
+tasks.withType(AbstractArchiveTask) {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
 group 'io.github.novacrypto'
 version '2019.01.27'
 
